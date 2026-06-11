@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Data & models (too large for git)
+data/samples/*
+!data/samples/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.pt
+*.onnx
+
+# Outputs
+outputs/
+runs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
