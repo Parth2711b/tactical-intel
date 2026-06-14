@@ -97,6 +97,19 @@ python backend_test.py
 
 The backend currently implements a placeholder background pipeline (see `backend/main.py`) that simulates formation, heatmap generation, and pressing metrics. Replace with real CV/analytics modules when ready.
 
+## Local utility scripts (optional)
+
+There are a few convenience scripts under the local `scripts/` folder that are kept untracked on this machine. They are helpful for development and testing but are intentionally not pushed to the repository by default.
+
+- `scripts/generate_heatmaps.py` — synthesize example heatmaps (uses NumPy + OpenCV).
+- `scripts/cleanup_results.py` — remove low-variance (solid-color) placeholder images from `data/results/`.
+- `scripts/inspect_results.py` — print simple stats (std/min/max) for images in `data/results/`.
+
+Notes:
+- These scripts require the following Python packages if you want to run them locally: `numpy`, `opencv-python`, and `Pillow` (install with `pip install numpy opencv-python Pillow`).
+- The `data/results/` directory is ignored by Git for generated images, but the repository keeps a `.gitkeep` so the folder exists.
+- Keeping the scripts local avoids committing machine-specific utilities or temporary helpers. If you want these shared, consider committing them to a feature branch (for example `dev/utils`).
+
 ---
 
 ## Team
