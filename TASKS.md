@@ -17,7 +17,7 @@ Goal: minimap working on a test clip end-to-end.
 | Pitch keypoint detection (32 keypoints) | P1 | `feature/cv-pipeline` | 🔲 | YOLOv8-pose on pitch |
 | Homography — pixel to real-world coords | P1 | `feature/cv-pipeline` | 🔲 | cv2.findHomography |
 | Export per-frame positions to CSV | P1 | `feature/cv-pipeline` | 🔲 | Input for all analytics modules |
-| FastAPI project scaffold | P3 | `feature/backend` | 🔲 | Basic routes only |
+| FastAPI project scaffold | P3 | `feature/backend` | ✅ | Implemented in `backend/main.py` (versioned endpoints, MP4 validation) |
 | React project scaffold | P4 | `feature/frontend` | 🔲 | Vite + Tailwind setup |
 
 ---
@@ -33,7 +33,7 @@ Goal: formation detection + heatmap working on uploaded clip.
 | Formation timeline — per 5-min window | P2 | `feature/analytics` | 🔲 | Output: list of (timestamp, formation) |
 | Pressing intensity per 15-min window | P2 | `feature/analytics` | 🔲 | Inter-player distance matrix |
 | Video upload endpoint (FastAPI) | P3 | `feature/backend` | 🔲 | Multipart upload |
-| Async processing + progress polling | P3 | `feature/backend` | 🔲 | Background task or celery |
+| Async processing + progress polling | P3 | `feature/backend` | ✅ | BackgroundTasks implemented; tested via `backend_test.py` |
 | Pitch minimap component (React) | P4 | `feature/frontend` | 🔲 | SVG overlay, player dots |
 | Formation timeline chart | P4 | `feature/frontend` | 🔲 | Chart.js or Recharts |
 

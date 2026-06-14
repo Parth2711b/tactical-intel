@@ -75,6 +75,30 @@ pip install -r requirements.txt
 
 ---
 
+## Run the backend locally
+
+Quick commands to run the FastAPI backend from the project root:
+
+```powershell
+# start in background (PowerShell)
+Start-Process -NoNewWindow -FilePath python -ArgumentList '-m','uvicorn','main:app','--app-dir','backend','--host','127.0.0.1','--port','8000' -WorkingDirectory "$PWD"
+
+# or run foreground (shows logs)
+python -m uvicorn main:app --app-dir backend --host 127.0.0.1 --port 8000
+```
+
+API docs (Swagger UI): http://127.0.0.1:8000/docs
+
+Quick end-to-end local test (creates a dummy MP4 and exercises upload → process → results):
+
+```bash
+python backend_test.py
+```
+
+The backend currently implements a placeholder background pipeline (see `backend/main.py`) that simulates formation, heatmap generation, and pressing metrics. Replace with real CV/analytics modules when ready.
+
+---
+
 ## Team
 
 | Person | Branch | Owns |
